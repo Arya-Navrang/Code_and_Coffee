@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar{
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .menu-links{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar .logo{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.navbar span{
+    color: #c06b3e;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+.navbar a:hover{
+    color: #c06b3e;
+}
+/** Content  */
+.hero-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+
+.hero-section .content{
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content h1{
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.content p{
+    font-weight:300;
+    margin-top: 10px;
+    max-width: 600px;
+}
+
+.hero-section .content button{
+    background:#fff;
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    font-size: 1rem;
+    padding: 12px 30px;
+    border-radius:6px ;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.hero-section .content button:hover{
+    background: #c06b3e ;
+    color: #fff;
+}
+
+#menu-btn{
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#close-menu-btn{
+    display: none;
+    position: absolute;
+    right: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px){
+    #close-menu-btn, #menu-btn{
+        display: block;
+    }
+    .navbar .menu-links{
+        position: fixed;
+        left: -260px;
+        top: 0;
+        flex-direction: column;
+        width: -260px;
+        height: 100vh;
+        background: #fff;
+        padding: 70px 40px 0;
+        transition: left 0.15s ease;
+    }
+
+    header .show-mobile-menu .navbar .menu-links{
+        left: 0;
+    }
+
+    .navbar a{
+        color: black;
+    }
+}
+
